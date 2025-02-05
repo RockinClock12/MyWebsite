@@ -1,0 +1,61 @@
+<div class="purple"></div>
+<div class="medium-blue"></div>
+<div class="light-blue"></div>
+<div class="red"></div>
+<div class="orange"></div>
+<div class="yellow"></div>
+<div class="cyan"></div>
+<div class="light-green"></div>
+<div class="lime"></div>
+<div class="magenta"></div>
+<div class="lightish-red"></div>
+<div class="pink"></div>
+
+<style>
+      animation: #{$color-name}-pseudo linear 20s alternate infinite;
+    border: 2px solid #{$color-hex};
+    width: random-num(5,50) + px;
+    height: random-num(5,50) + px;
+    transform:
+      translate3d(
+        random-calc($random1) + vw,
+        random-calc($random2) + vh,
+        0)
+      rotate((random(360)) + deg);
+  }
+
+  @keyframes #{$color-name} {
+    50% {
+      transform: translate3d(
+        $random3 + vw,
+        $random4 + vh,
+        0);
+    }
+    100% {
+      transform: translate3d(
+        $random5 + vw,
+        $random6 + vh,
+        0);
+    }
+  }
+
+  @keyframes #{$color-name}-pseudo {
+    33% {
+      transform:
+        translate3d(
+          random-calc($random3) + vw,
+          random-calc($random4) + vh,
+          0)
+        rotate((random(360)) + deg);
+    }
+    100% {
+      transform:
+        translate3d(
+          random-calc($random5) + vw,
+          random-calc($random6) + vh,
+          0)
+        rotate((random(360)) + deg);
+    }
+  }
+}
+</style>
