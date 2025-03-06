@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+
+<p>Test Page, you can test out your web browser's HTML processing capabilities here.</p>
+<div class="Tomato">
+    <h2>Text in the div</h2>
+    <div class="ButtonDivider">
+        <p>This is a secondary Div containing the button!</p>
+         <button class="Button1">
+            <p class="ButtonText">
+              this is a very cool button
+             </p>
+        </button>
+        <p>neat huh</p>
+    </div>
+    <p class="TextTest"> 
+         this is more COOL text below the button, but its kinda blurry. can you wipe the screen rq?
+    </p>
+    <h3>H3</h3>
+    <h4>H4</h4>
+    <h5>H5</h5>
+    <h6>H6</h6>
+    <p>Paragraph</p>
+    <p> This is a Iframe below.</p>
+    <iframe src="https://www.bing.com/" title="Iframe Test"></iframe>
+    <h2>FILTER TESTING (Non-webkit)</h2>
+    <p class="BrightnessTest">Brightness. If this element is a deep red, then it is working. If it is bright red, it is not.
+    </p>
+    <p class="BlurTest"> Blur (Should be blurry)</p>
+    <p class="OpacityTest">Opacity (If you can see this perfectly, then it isnt working.)</p>
+    <p class="ContrastTest">This text has a Linear-Gradient mask</p>
+    <h2>WEBKIT FILTER TESTING</h2>
+    <p class="WebkitBlur">Webkit Blur</p>
+</div>
+<p>last updated march 10th 2025</p>
+
+<style>
+    .ButtonDivider {
+        background-image: linear-gradient(aquamarine,blue);
+    }
+    .Tomato {
+        background-image: linear-gradient(red, yellow);
+        background-size: cover;
+        background-position: center;
+    }
+    .Button1 {
+        backdrop-filter: blur(10px);
+        background-color: transparent;
+        border-radius: 20px;
+        width: 100%;
+        
+    }
+    .ButtonText {
+        Color: #FFF;
+        background-color: transparent;
+    }
+    .TextTest {
+        filter: blur(1px);
+    }
+    .BrightnessTest {
+        color: red;
+        filter: brightness(50%);
+    }
+    .BlurTest {
+        filter: blur(1px);
+    }
+    .OpacityTest {
+        filter: Opacity(10%);
+    }
+    .ContrastTest {
+        filter: linear-gradient(aquamarine,blue);
+    }
+    .WebkitBlur {
+        --webkit-filter: blur(1px);
+    }
+</style>
